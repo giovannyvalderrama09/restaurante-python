@@ -1,6 +1,8 @@
 from django.shortcuts import render
 
 from web.formularios.formularioPlatos import FormularioPlatos
+from web.formularios.formularioEmpleados import FormularioEmpleados
+
 
 
 # Create your views here.
@@ -16,7 +18,12 @@ def Home(request):
 
 
 def Empleados(request):
-    return render(request, 'empleados.html')  
+
+    formularioEmpleados=FormularioEmpleados()
+    data={
+        'formularioEmpleados':formularioEmpleados
+    }
+    return render(request, 'empleados.html',data)  
 
 
 def Platos(request):

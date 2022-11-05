@@ -1,155 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
 
-    <link rel="stylesheet" href="../static/styles/estiloshome.css">
+    <link rel="stylesheet" href="../static/styles/estiloshome.css" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+
+    <link rel="icon" href="../static/img/elherbario_logo.svg" />
 
     <title>Herbario</title>
-</head>
+  </head>
 
-<body>
-
-    <header>
-        {% include './shared/menu.html' %}
-    </header>
+  <body>
+    <header>{% include './shared/menu.html' %}</header>
     <main>
-        <section>
-            <div class="banner">
-                <img src="../static/img/elherbario_logo.svg" alt="logo de herbario">
+      <section>
+        <div class="banner">
+          <img src="../static/img/elherbario_logo.svg" alt="logo de herbario" />
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="row justify-content-center my-5">
+            <div class="col-12 col-md-5 text-center">
+              <img
+                src="../static/img/plato.png"
+                alt="plato"
+                class="img-fluid w-100"
+              />
+              <h1>El Herbario de huerta</h1>
+              <p
+                class="animate__animated animate__fadeInLeft wow animate__slow"
+              >
+                El restaurante Herbario se caracteriza por brindarle a sus
+                clientes una experiencia culinaria única, en la que desde el
+                primer plato se involucran todos los sentidos. Se mezclan
+                técnicas que van desde la cocina de vanguardia hasta métodos
+                tradicionales de la cocina colombiana. Colombia, precisamente,
+                está en cada paso dentro de Herbario: los ingredientes y quienes
+                los preparan son colombianos que sueñan con que nuestros sabores
+                lleguen a los ciudadanos del mundo. Precisamente el menú no es
+                uno tradicional. No hay platos específicos y se divide en
+                momentos gastronómicos; momentos que juegan con los sentidos, la
+                memoria, sabores, olores y texturas que involucran al comensal a
+                sentir y vivir un sinfín de emociones.
+              </p>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
+      <section>
+        <div class="container-fluid g-0">
+          <div class="row">
+            <div class="col-12 col-md-6 align-self-center">
+              <img
+                src="../static/img/inicio.jpg"
+                alt="huerta"
+                class="img-fluid w-100"
+                style="border-radius: 100%;"
+              />
+            </div>
 
-
-        <section>
-            <div class="container">
-                <div class="row justify-content-center my-5">
-                    <div class="col-12 col-md-5 text-center">
-                        <img src="../static/img/plato.png" alt="plato" class="img-fluid w-100">
-                        <h1> El Herbario de huerta</h1>
-                        <p class="animate__animated animate__fadeInLeft wow animate__slow ">Lorem ipsum dolor sit amet
-                            consectetur adipisicing elit. Modi praesentium doloremque nostrum
-                            consectetur repellat dolores voluptatem quia unde aperiam? Debitis.</p>
-                    </div>
+            <div class="col-12S col-md-6">
+              <div class="row">
+                <div class="col-12 col-md-6 text-center">
+                  <img
+                    src="../static/img/vegetal_1.jpg"
+                    alt="vegetal_1"
+                    class="img-fluid w-100"
+                  />
+                  <h2 class="fw-bold">Catering</h2>
+                  <p
+                    class="animate__animated animate__bounceInRight wow animate__slow"
+                  >
+                  Herbario  es un establecimiento de propiedad y gestión familiar. Con una dedicación a la excelencia culinaria y un servicio excepcional, estamos orgullosos de ofrecer a nuestros clientes porciones generosas preparadas con los mejores y más frescos ingredientes. Nuestros platos caseros son totalmente naturales y no contienen conservantes.
+                  </p>
                 </div>
-            </div>
-        </section>
 
-
-        <section>
-            <div class="container-fluid g-0">
-                <div class="row">
-                    <div class="col-12 col-md-6 align-self-center">
-                        <img src="../static/img/huerta.jpeg" alt="huerta" class="img-fluid w-100">
-                    </div>
-
-                    <div class="col-12S col-md-6">
-                        <div class="row">
-                            <div class="col-12 col-md-6 text-center">
-                                <img src="../static/img/vegetal_1.jpg" alt="vegetal_1" class="img-fluid w-100">
-                                <h2 class="fw-bold">Catering</h2>
-                                <p class="animate__animated animate__bounceInRight wow animate__slow">Lorem ipsum dolor
-                                    sit
-                                    amet consectetur adipisicing elit. Suscipit temporibus assumenda esse dolores, sint
-                                    quasi necessitatibus eos, adipisci repellat recusandae excepturi fuga alias
-                                    laboriosam quod ullam provident qui molestiae eum?</p>
-                            </div>
-
-
-                            <div class="col-12 col-md-6">
-                                <img src="../static/img/vegetal_2.jpg" alt="vegetal_2" class="img-fluid w-100">
-                                <h2 class="fw-bold">
-                                    Servicio social
-                                </h2>
-                                <p class="animate__animated animate__bounceInRight wow animate__slow">Lorem ipsum dolor
-                                    sit
-                                    amet consectetur adipisicing elit. Earum, delectus! Odio, magnam. Impedit cupiditate
-                                    veniam quidem adipisci reiciendis in praesentium quo deleniti. Officiis harum,
-                                    perferendis adipisci rerum a maiores doloribus!</p>
-                                    
-                            </div>
-                        </div>
-                    </div>
+                <div class="col-12 col-md-6">
+                  <img
+                    src="../static/img/vegetal_2.jpg"
+                    alt="vegetal_2"
+                    class="img-fluid w-100"
+                  />
+                  <h2 class="fw-bold">Fundación Herbario</h2>
+                  <p
+                    class="animate__animated animate__bounceInRight wow animate__slow"
+                  >
+                    La fundación Herbario es una entidad sin ánimo de lucro
+                    creada el 14 de noviembre del 2010. Durante más de 12 años
+                    Herbario ha invertido recursos para brindar educación en
+                    cocina y disciplinas afines, brindando oportunidades de
+                    superación a personas que estaban afectadas por alguna
+                    situación de vulnerabilidad, problemas socio-económicos o
+                    afectados por alguna situación de discapacidad física.
+                    Herbario fue una empresa pionera en contratar víctimas, ex
+                    combatientes del conflicto armado colombiano.
+                  </p>
                 </div>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-
-        <section>
-            <div class="container ">
-                <div class="row justify-content-center p-5">
-                    <div class="col-12  text-center text-white"></div>
-                    <div class="col-12 col-md-3">
-                        <img src="../static/img/plato1.jpg" alt="" class="img-fluid w-100 zoom">
-                    </div>
-                    <div class="col-12 col-md-3">
-                        <img src="../static/img/plato2.jpg" alt="" class="img-fluid w-100 zoom">
-                    </div>
-                    <div class="col-12 col-md-3">
-                        <img src="../static/img/plato3.jpg" alt="" class="img-fluid w-100 animate__animated animate__bounceInRight wow animate__slow zoom">
-                    </div>
-                    <div class="col-12 text-center p-5">
-                        <a href="#" class="btn btn-outline-dark">Ver menu</a>
-                    </div>
-                </div>
+      <section>
+        <div class="container">
+          <div class="row justify-content-center p-5">
+            <div class="col-12 text-center text-white"></div>
+            <div class="col-12 col-md-3">
+              <img
+                src="../static/img/plato1.jpg"
+                alt=""
+                class="animate__animated animate__backInLeft wow animate__slow img-fluid w-100 zoom"
+              />
             </div>
-        </section>
-
-
+            <div class="col-12 col-md-3">
+              <img
+                src="../static/img/plato2.jpg"
+                alt=""
+                class="img-fluid w-100 animate__animated animate__backInUp wow animate__slow zoom"
+              />
+            </div>
+            <div class="col-12 col-md-3">
+              <img
+                src="../static/img/plato3.jpg"
+                alt=""
+                class="img-fluid w-100 animate__animated animate__backInRight wow animate__slow zoom"
+              />
+            </div>
+            <div class="col-12 text-center p-5">
+              <a href="#" class="btn btn-outline-dark">Inicio</a>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
+    <!-- Footer -->
+    <footer class="text-center text-lg-start text-muted">
+      <!-- Section: Social media -->
+      <section
+        class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
+      >
+        <div class="me-5 d-none d-lg-block">
+          <span>Conéctate con nosotras en las redes sociales:</span>
+        </div>
+        <div class="mx-5">
+          <i class="bi bi-facebook"></i>
 
+          <i class="bi bi-twitter"></i>
 
+          <i class="bi bi-google"></i>
 
+          <i class="bi bi-instagram"></i>
 
+          <i class="bi bi-github"></i>
+        </div>
+      </section>
+      <!-- Section: Social media -->
 
+      <!-- Section: Links  -->
+      <section class="">
+        <div class="container text-center text-md-start mt-5">
+          <!-- Grid row -->
+          <div class="row mt-3">
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+              <!-- Content -->
+              <h6 class="text-uppercase fw-bold mb-4">
+                <i class="fas fa-gem me-3"></i>Restaurante Herbario
+              </h6>
+              <p></p>
+            </div>
+            <!-- Grid column -->
 
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">Useful links</h6>
+              <p>
+                <a href="{% url 'empleados' %}" class="text-reset"
+                  >Únete al equipo</a
+                >
+              </p>
+              <p>
+                <a href="#" class="text-reset">Inicio</a>
+              </p>
+              <p>
+                <a href="{% url 'platos' %}" class="text-reset">Ordenes</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Help</a>
+              </p>
+            </div>
+            <!-- Grid column -->
 
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+              <p>
+                <i class="bi bi-house-door-fill"></i>Medellín: Calle 7d #43c-36
+              </p>
+              <p>
+                <i class="bi bi-envelope-plus-fill"></i>
+                info@example.com
+              </p>
+              <p><i class="bi bi-telephone-fill"></i> + 01 234 567 88</p>
+              <p><i class="bi bi-telephone-fill"></i> + 01 234 567 89</p>
+            </div>
+            <!-- Grid column -->
+          </div>
+          <!-- Grid row -->
+        </div>
+      </section>
+      <!-- Section: Links  -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <footer></footer>
+      <!-- Copyright -->
+      <div
+        class="text-center p-4"
+        style="background-color: rgba(0, 0, 0, 0.05)"
+      >
+        © 2021 Copyright:
+        <a class="text-reset fw-bold">Herbario.com</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
     <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-        crossorigin="anonymous"></script>
-
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
 
     <script src="../static/js/wow.js"></script>
     <script>
-        new WOW().init();
+      new WOW().init();
     </script>
-
-</body>
-
+  </body>
 </html>
