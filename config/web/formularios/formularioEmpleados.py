@@ -32,7 +32,7 @@ class FormularioEmpleados(forms.Form):
     )
 
     contactoEmergencia=forms.CharField(
-        label="Contacto de emergencia:",
+        label="Numero de Contacto:",
         required= True,
         max_length= 30,
         widget= forms.TextInput(attrs={'class': 'form-control m-4'})

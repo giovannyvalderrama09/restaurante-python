@@ -36,16 +36,21 @@
                 </div>
                 <div class="col-12 col-md-7">
                     <h2 class="text-center my-2">Registro de platos</h2>
-                    <form action="">
+                    <form method="POST">
 
-                      {{formulario}}
+                        {{formulario}}
 
-                      <button type="submit" class="btn btn-outline-success w-100">Enviar</button>
+                        {% csrf_token %}
+
+                        <button type="submit" class="btn btn-outline-success w-100">Enviar</button>
                     </form>
                 </div>
             </div>
         </div>
     </main>
+
+
+
 
 </body>
 
