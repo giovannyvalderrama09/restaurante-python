@@ -3,34 +3,34 @@ from django.shortcuts import render
 from web.formularios.formularioPlatos import FormularioPlatos
 from web.formularios.formularioEmpleados import FormularioEmpleados
 
-from web.models import Platos  
+from web.models import Platos
 from web.models import Empleados
-
 
 
 # Create your views here.
 
-#Todas las vistas son funciones de python
+# Todas las vistas son funciones de python
 
 def Home(request):
     return render(request, 'home.html')
 
 
 # def Platos(request):
-#     return render(request, 'menuPlatos.html')    
+#     return render(request, 'menuPlatos.html')
 
 
 def EmpleadosVista(request):
 
-    formularioEmpleados=FormularioEmpleados()
-    data={
-        'formularioEmpleados':formularioEmpleados
+    formularioEmpleados = FormularioEmpleados()
+    data = {
+        'formularioEmpleados': formularioEmpleados,
+        'bandera': False
     }
 
     if request.method == 'POST':
         datosFormularioEmpleados = FormularioEmpleados(request.POST)
         if datosFormularioEmpleados.is_valid():
-            datosLimpios=datosFormularioEmpleados.cleaned_data
+            datosLimpios = datosFormularioEmpleados.cleaned_data
             print(datosLimpios)
 
             empleadoNuevo = Empleados(
@@ -43,29 +43,36 @@ def EmpleadosVista(request):
 
             try:
                 empleadoNuevo.save()
-                print("Exito guardando datos")
+                data["bandera"] = True
+                # print("Exito guardando datos")
             except Exception as error:
-                    print("ups",error)
+                print("ups", error)
+                data["bandera"] = False
 
-    
-    return render(request, 'empleados.html',data)  
+    return render(request, 'empleados.html', data)
 
 
 def PlatosVista(request):
 
-    formulario=FormularioPlatos()
+    #Rutina para consultar platos
+    platosConsultados = Platos.objects.all()  
+    print("INFORMACION BD",platosConsultados) 
 
-    data={
-    'formulario':formulario
-}    
+    formulario = FormularioPlatos()
+
+    data = {
+        'formulario': formulario,
+        'bandera': False,
+        'platos': platosConsultados
+    }
 # RECIBIMOS LOS DATOS DEL FORMULARIO
 
     if request.method == 'POST':
         datosFormularioPlatos = FormularioPlatos(request.POST)
         if datosFormularioPlatos.is_valid():
-            datosLimpios=datosFormularioPlatos.cleaned_data
+            datosLimpios = datosFormularioPlatos.cleaned_data
             print(datosLimpios)
-            #construir diccionario de envio de datos hacia la db
+            # construir diccionario de envio de datos hacia la db
             platoNuevo = Platos(
                 nombreplato=datosLimpios["nombre"],
                 descripcion=datosLimpios["descripcion"],
@@ -73,12 +80,13 @@ def PlatosVista(request):
                 precio=datosLimpios["precio"],
                 especialidad=datosLimpios["especialidad"],
             )
-            # Intentare enviar mis datos a la bd   
+            # Intentare enviar mis datos a la bd
             try:
                 platoNuevo.save()
-                print("Exito guardando datos")
+                data["bandera"] = True
+                # print("Exito guardando datos")
+
             except Exception as error:
-                print("ups",error)                
-    return render(request, 'menuPlatos.html',data)
-
-
+                print("ups", error)
+                data["bandera"] = False
+    return render(request, 'menuPlatos.html', data)

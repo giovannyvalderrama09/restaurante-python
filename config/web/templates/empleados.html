@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="../static/styles/estiloshome.css" />
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <title>Empreados restaurante</title>
 </head>
 
@@ -20,6 +22,14 @@
 
   <br />
   <br />
+
+  {% if bandera %}
+  <script>Swal.fire(
+      'Good job!',
+      'You clicked the button!',
+      'success'
+    )</script>
+  {% endif %}
 
   <main>
     <div class="container mt-5">
