@@ -51,7 +51,87 @@
         </div>
       </div>
     </div>
+
+
+
+    <section>
+      <div class="container my-5">
+        <div class="row row-cols-1 row-cols-md-5">
+          {% for empleado in empleados %}
+          <div class="col my-3">
+            <div class="card h-100 shadow ">
+              <img src=" {{empleado.foto}}" class="w-100 img-fluid h-100">
+              <h5 class="text-center text-muted">Nombres: {{empleado.nombre_empleados}}</h5>
+              <h5 class="text-center text-muted">Apellidos: {{empleado.apellidos_empleados}}</h5>
+            </div>
+          </div>
+          {% endfor%}
+        </div>
+      </div>
+    </section>
   </main>
+
+
+
+
+  <!-- Footer -->
+  <footer class="text-center text-lg-start text-muted">
+    <!-- Section: Social media -->
+
+    <!-- Section: Links  -->
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              <i class="fas fa-gem me-3"></i>Restaurante Herbario
+            </h6>
+            <p></p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">Useful links</h6>
+            <!-- <p>
+              <a href="{% url 'empleados' %}" class="text-reset">Únete al equipo</a>
+            </p> -->
+            <p>
+              <a href="#" class="text-reset">Inicio</a>
+            </p>
+            <p>
+              <a href="{% url 'menu' %}" class="text-reset">Ordenes</a>
+            </p>
+            <p>
+              <a href="{% url 'home' %}" class="text-reset">Herbario</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+            <p>
+              <i class="bi bi-house-door-fill"></i>Medellín: Calle 7d #43c-36
+            </p>
+            <p>
+              <i class="bi bi-envelope-plus-fill"></i>
+              info@example.com
+            </p>
+            <p><i class="bi bi-telephone-fill"></i> + 01 234 567 88</p>
+            <p><i class="bi bi-telephone-fill"></i> + 01 234 567 89</p>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
 </body>
 
 </html>

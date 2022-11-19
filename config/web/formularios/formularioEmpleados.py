@@ -39,6 +39,6 @@ class FormularioEmpleados(forms.Form):
     )
     foto=forms.CharField(
         required= True,
-        max_length= 30,
+        max_length= 600,
         widget= forms.TextInput(attrs={'class': 'form-control m-4'})
     )

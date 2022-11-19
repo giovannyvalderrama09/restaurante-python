@@ -21,10 +21,12 @@ def Home(request):
 
 def EmpleadosVista(request):
 
+    empleadosConsultados = Empleados.objects.all()
     formularioEmpleados = FormularioEmpleados()
     data = {
         'formularioEmpleados': formularioEmpleados,
-        'bandera': False
+        'bandera': False,
+        "empleados": empleadosConsultados
     }
 
     if request.method == 'POST':
@@ -54,9 +56,9 @@ def EmpleadosVista(request):
 
 def PlatosVista(request):
 
-    #Rutina para consultar platos
-    platosConsultados = Platos.objects.all()  
-    print("INFORMACION BD",platosConsultados) 
+    # Rutina para consultar platos
+    platosConsultados = Platos.objects.all()
+    print("INFORMACION BD", platosConsultados)
 
     formulario = FormularioPlatos()
 
@@ -90,3 +92,32 @@ def PlatosVista(request):
                 print("ups", error)
                 data["bandera"] = False
     return render(request, 'menuPlatos.html', data)
+
+
+def Menu(request):
+
+    platosConsultados = Platos.objects.all()
+    print("INFORMACION BD", platosConsultados)
+
+    data = {
+        # 'formulario': formulario,
+        # 'bandera': False,
+        'platos': platosConsultados
+    }
+# RECIBIMOS LOS DATOS DEL FORMULARIO
+
+    if request.method == 'POST':
+        datosFormularioPlatos = FormularioPlatos(request.POST)
+        if datosFormularioPlatos.is_valid():
+            datosLimpios = datosFormularioPlatos.cleaned_data
+            print(datosLimpios)
+            # construir diccionario de envio de datos hacia la db
+            platoNuevo = Platos(
+                nombreplato=datosLimpios["nombre"],
+                descripcion=datosLimpios["descripcion"],
+                fotografia=datosLimpios["fotografia"],
+                precio=datosLimpios["precio"],
+                especialidad=datosLimpios["especialidad"],
+            )
+    
+    return render(request, 'menuRestaurante.html',data)
